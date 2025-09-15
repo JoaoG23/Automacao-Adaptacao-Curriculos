@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  frontend:
+    build: "./frontend"
+    container_name: frontend-automacao-adaptacao-curriculos-container
+    image: front-automacao-adaptacao-curriculos-image
+    restart: always
+    volumes:
+      - ./frontend/nginx/nginx.config:/etc/nginx/conf.d/default.conf    
+    ports:
+      - "83:80"
+    environment:
+      - NGINX_HOST=automacaoadaptacaocurriculos.com
+      - NGINX_PORT=83
+

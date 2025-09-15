@@ -37,7 +37,7 @@ export default function Home() {
   };
 
   const sendRequest = async (): Promise<ApiResponse> => {
-    const response = await fetch("http://localhost:5000/api/generate-resume", {
+    const response = await fetch("http://localhost:3003/api/generate-resume", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
