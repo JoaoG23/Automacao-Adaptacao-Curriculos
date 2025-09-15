@@ -1,0 +1,269 @@
+
+CURRICULO:{{CURRICULO}}
+Quero que você aja como um analista de RH e quero que me ajude
+a criar o melhor CURRICULO com base na vaga que estou concorrendo.
+Vou te enviar a descrição da vaga e quero que você faça um 
+paralo do meu CURRICULO apresentado com a vaga. 
+O foco aqui é criar um curriculo personalidado, focado e bem persuasivo para a vaga;
+
+Vou te enviar as vagas da seguinte maneira entre VAGA:((Programador Web));
+Quero que voce retorne os dados da seguinte maneira abaixo.
+{
+    "nome_da_empresa_canditatura": "<pode ser vazio> ou nome da empresa",
+    "nome_candidato": "JOÃO GUILHERME",
+    "objetivo": "Engenheiro de Software Pleno",
+    "informacoes_contato": {
+        "telefone": "(31) 99621-6938",
+        "email": "jguilhermeempresarial@outlook.com",
+        "endereco": "Ribeirão das Neves, Minas Gerais, BR",
+        "linkedin": "www.linkedin.com/in/joaog123",
+        "github": "https://github.com/JoaoG23"
+    },
+    "resumo_profissional": "Tenho 4 anos de experiência em desenvolvimento Fullstack e sou proficiente em tecnologias como <tecnologia da vaga> entre outras, <o que posso agregar para empresa com base na descrição da empresa e nicho dela, pode cita o nome dela se existir, obs: - Todo esse resumo deve ser no máximo 230 caracteres. - Coloque bastante marketing nessa parte >",
+    "experiencias_profissionais": [
+        {
+            "empresa": "Mirror Tecnologia",
+            "tempo_atuacao": "Fev de 2025 – Atualmente",
+            "cargo": "Desenvolvedor Fullstack",
+            "atividades": "Atuo em soluções de e-commerce e logística, com especialização em integrações entre marketplaces (Mercado Livre, Amazon, Magalu) e ERPs (Bling, Tiny, SAP). Participei de projetos estratégicos para grandes empresas, como a Mondial Eletrodomésticos, solucionando desafios técnicos e operacionais. Sou coautor de um SaaS analítico voltado para vendas no Mercado Livre, responsável por entregar insights valiosos como ticket médio, receita consolidada e tendências de mercado.",
+            "tecnologias": "NodeJS, NestJS, Python, MySQL, SQLAlchemy, Flask, Webhook, Oauth2, NextJS"
+        },
+        {
+            "empresa": "Autônomo",
+            "tempo_atuacao": "Ago de 2024 - Fev de 2025",
+            "cargo": "Desenvolvedor Fullstack",
+            "atividades": "Criei sistemas financeiros e contábeis que otimizaram processos. Além disso, implementei automações para extrair dados de NFEs em PDFs, permitindo que balanços que antes levavam dias para serem concluídos fossem realizados em apenas algumas horas, reduzindo o trabalho do cliente.",
+            "tecnologias": "ReactJS, NodeJS, ExpressJS, Typescript, PostgresSQL, Docker, Python"
+        },
+        {
+            "empresa": "XC Soluções Tecnológicas",
+            "tempo_atuacao": "Dez de 2022 – Mai de 2024",
+            "cargo": "Desenvolvedor Fullstack Web",
+            "atividades": "Otimizei a gestão de acesso para caminhoneiros e veículos, criando, estruturando e documentando , criei o sistema inteiro o Sistema de Controle de Acesso para Docas e Portarias, do início ao fim, com atuação no Back-end e Front-end. Integrei uma balança rodoviária ao Sistema de Gestão de Doca e Portaria, automatizando o check-in de veículos, o que melhorou significativamente o processo logístico e eliminou filas de caminhões.",
+            "tecnologias": "ReactJS, Redux, Typescript, Bootstrap, ExpressJS, SQL Server, PostgresSQL, Oracle SQL, PrismaORM, NodeJS, Git, Github, Docker"
+        },
+        {
+            "empresa": "Autônomo",
+            "tempo_atuacao": "Mai de 2022 – Nov de 2022",
+            "cargo": "Desenvolvedor Freelancer Web",
+            "atividades": "Atuei como freelancer no desenvolvimento de um MVP de aplicativo para academia, envolvendo a criação do Back-end e Front-end. Também participei do levantamento de requisitos para garantir soluções alinhadas às necessidades do projeto.",
+            "tecnologias": "ReactJS, NodeJS, ExpressJS, Typescript, SequelizeORM"
+        },
+        {
+            "empresa": "AGS INN",
+            "tempo_atuacao": "Jul de 2021 - Abr de 2022",
+            "cargo": "Técnico de Suporte em Desenvolvimento TI e Software",
+            "atividades": "Suporte técnico aos usuários, implantação de sistemas e criação de interfaces Front-end para sistemas.",
+            "tecnologias": "HTML, CSS, Bootstrap, Materialize, MySQL, PostgresSQL, SOUP, REST, Git"
+        }
+    ],
+    "outras_habilidades": [
+        "AWS Services (RDS, IAM, VPC, EC2)",
+        "NestJS",
+        "Pandas",
+        "Java(Spring Boot, JPA)",
+        "MongoDB",
+        "Redis",
+        "TailwindCSS",
+    outras ....
+    ],
+    "idiomas": [
+        "Inglês (Intermediário)",
+        "Espanhol (Intermediário)"
+    ],
+    "formacoes": [
+        "Técnico, Técnico em Informática, 02/2020 - 01/2022",
+        "Graduação, Análise e Desenvolvimento ..."
+    ]
+}
+
+Mais exemplos: 
+
+VAGA:((
+Engenheiro de Software
+São Paulo, São Paulo, Brasil · há 6 horas · 40 candidaturas
+Promovida por recrutador · A empresa normalmente leva 1 semana para avaliar as candidaturas
+
+
+ Híbrido
+Corresponde às suas preferências de vaga e o tipo de local de trabalho é Híbrido.
+
+ Tempo integral
+Corresponde às suas preferências de vaga e o tipo de vaga é Tempo integral.
+
+  8 de 13 correspondência(s) de competências 
+Corresponde às suas preferências de vaga e o tipo de vaga é {}.
+
+Candidatura simplificada
+
+Salvar
+Salvar Engenheiro de Software na Coodex AI
+Veja como você se compara a 40 candidatos
+Acesse insights exclusivos sobre candidatos, veja vagas sobre as quais você tem mais chances de receber resposta e muito mais.
+
+Experimente Premium por BRL0
+Sobre a vaga
+Sobre a Empresa
+
+
+
+Na Coodex AI, estamos construindo o futuro com inteligência artificial, desenvolvendo soluções inovadoras que transformam indústrias e melhoram a vida das pessoas. Somos uma equipe apaixonada por tecnologia, movida pela curiosidade e comprometida com a excelência em cada entrega. Se você busca um ambiente dinâmico, desafiador e com oportunidades de crescimento, a Coodex AI é o seu lugar.
+
+
+
+
+Sobre a Vaga
+
+
+
+Buscamos um(a) Engenheiro(a) de Software Pleno/Sênior experiente e proativo(a) para se juntar à nossa equipe. Você terá papel essencial na concepção, desenvolvimento e manutenção de nossas aplicações e serviços, utilizando TypeScript, NestJS, Next.js, MongoDB e bancos de dados vetoriais. Queremos alguém que combine paixão por criar software de alta qualidade com curiosidade para explorar novas tecnologias e disposição para resolver problemas complexos.
+
+
+
+
+Responsabilidades
+
+
+
+Projetar, desenvolver, testar, implantar e manter aplicações robustas e escaláveis com NestJS e Next.js.
+Trabalhar com bancos de dados relacionais e não-relacionais, em especial MongoDB e Vector DBs, garantindo performance e escalabilidade.
+Colaborar com equipes multidisciplinares (produto, design, outros engenheiros) para definir, projetar e lançar novas funcionalidades.
+Escrever código limpo, testável e bem documentado, seguindo boas práticas e padrões de arquitetura.
+Participar ativamente de revisões de código, oferecendo e recebendo feedback construtivo.
+Solucionar problemas, otimizar desempenho e garantir a qualidade em todas as fases do ciclo de desenvolvimento.
+Contribuir para a evolução contínua dos processos, ferramentas e arquitetura da plataforma.
+
+
+ 
+Qualificações
+
+
+
+Experiência sólida com TypeScript no backend (NestJS) e frontend (Next.js/React).
+Conhecimento profundo em APIs RESTful e integração com serviços de terceiros.
+Experiência com MongoDB e boas práticas em bancos NoSQL.
+Experiência com Codex CLI ou ferramentas semelhantes de automação e gestão de pipelines.
+Familiaridade com bancos de dados vetoriais (ex.: Pinecone, Weaviate, Milvus ou equivalentes).
+Proficiência em Git e boas práticas de versionamento.
+Experiência com metodologias ágeis (Scrum, Kanban).
+Habilidade em escrever testes unitários e de integração.
+Boa comunicação, trabalho em equipe e pensamento analítico.
+Inglês técnico (leitura e escrita).
+
+
+ 
+Habilidades Preferenciais
+
+Conhecimento em nuvem (AWS, Azure ou GCP).
+Experiência em projetos de IA (LLMs, embeddings, RAG, pipelines de dados).
+Contribuições open-source.
+
+
+ 
+Faixa Salarial e Pacote de Compensação
+
+Salário competitivo
+Vale Refeição/Alimentação
+Plano de Saúde
+Trabalho híbrido
+Ambiente de aprendizado contínuo
+Oportunidades de crescimento
+))
+
+Que a resposta seja da maneira abaixo:
+
+{
+    "nome_da_empresa_canditatura": "<pode ser vazio> ou nome da empresa",
+    "nome_candidato": "JOÃO GUILHERME",
+    "objetivo": "Engenheiro de Software Pleno",
+    "informacoes_contato": {
+        "telefone": "(31) 99621-6938",
+        "email": "jguilhermeempresarial@outlook.com",
+        "endereco": "Ribeirão das Neves, Minas Gerais, BR",
+        "linkedin": "www.linkedin.com/in/joaog123",
+        "github": "https://github.com/JoaoG23"
+    },
+    "resumo_profissional": "Tenho 4 anos de experiência em desenvolvimento Fullstack e sou proficiente em tecnologias como <tecnologia da vaga> entre outras, <o que posso agregar para empresa com base na descrição da empresa e nicho dela, pode cita o nome dela se existir, obs: - Todo esse resumo deve ser no máximo 230 caracteres. - Coloque bastante marketing nessa parte >",
+    "experiencias_profissionais": [
+        {
+            "empresa": "Mirror Tecnologia",
+            "tempo_atuacao": "Fev de 2025 – Atualmente",
+            "cargo": "Desenvolvedor Fullstack",
+            "atividades": "Atuo em soluções de e-commerce e logística, com especialização em integrações entre marketplaces (Mercado Livre, Amazon, Magalu) e ERPs (Bling, Tiny, SAP). Participei de projetos estratégicos para grandes empresas, como a Mondial Eletrodomésticos, solucionando desafios técnicos e operacionais. Sou coautor de um SaaS analítico voltado para vendas no Mercado Livre, responsável por entregar insights valiosos como ticket médio, receita consolidada e tendências de mercado.",
+            "tecnologias": "NodeJS, NestJS, Python, MySQL, SQLAlchemy, Flask, Webhook, Oauth2, NextJS"
+        },
+        {
+            "empresa": "Autônomo",
+            "tempo_atuacao": "Ago de 2024 - Fev de 2025",
+            "cargo": "Desenvolvedor Fullstack",
+            "atividades": "Criei sistemas financeiros e contábeis que otimizaram processos. Além disso, implementei automações para extrair dados de NFEs em PDFs, permitindo que balanços que antes levavam dias para serem concluídos fossem realizados em apenas algumas horas, reduzindo o trabalho do cliente.",
+            "tecnologias": "ReactJS, NodeJS, ExpressJS, Typescript, PostgresSQL, Docker, Python"
+        },
+        {
+            "empresa": "XC Soluções Tecnológicas",
+            "tempo_atuacao": "Dez de 2022 – Mai de 2024",
+            "cargo": "Desenvolvedor Fullstack Web",
+            "atividades": "Otimizei a gestão de acesso para caminhoneiros e veículos, criando, estruturando e documentando o Criei o sistema inteiro, Sistema de Controle de Acesso para Docas e Portarias, do início ao fim, com atuação no Back-end e Front-end. Integrei uma balança rodoviária ao Sistema de Gestão de Doca e Portaria, automatizando o check-in de veículos, o que melhorou significativamente o processo logístico e eliminou filas de caminhões.",
+            "tecnologias": "ReactJS, Redux, Typescript, Bootstrap, ExpressJS, SQL Server, PostgresSQL, Oracle SQL, PrismaORM, NodeJS, Git, Github, Docker"
+        },
+        {
+            "empresa": "Autônomo",
+            "tempo_atuacao": "Mai de 2022 – Nov de 2022",
+            "cargo": "Desenvolvedor Freelancer Web",
+            "atividades": "Atuei como freelancer no desenvolvimento de um MVP de aplicativo para academia, envolvendo a criação do Back-end e Front-end. Também participei do levantamento de requisitos para garantir soluções alinhadas às necessidades do projeto.",
+            "tecnologias": "ReactJS, NodeJS, ExpressJS, Typescript, SequelizeORM, AngularJS, Ionic .."
+        },
+        {
+            "empresa": "AGS INN",
+            "tempo_atuacao": "Jul de 2021 - Abr de 2022",
+            "cargo": "Técnico de Suporte em Desenvolvimento TI e Software",
+            "atividades": "Suporte técnico aos usuários, implantação de sistemas e criação de interfaces Front-end para sistemas.",
+            "tecnologias": "HTML, CSS, Bootstrap, Materialize, MySQL, PostgresSQL, SOUP, REST, Git, Ionic ..."
+        }
+    ],
+    "outras_habilidades": [
+        "AWS Services (RDS, IAM, VPC, EC2)",
+        "NestJS",
+        "Pandas",
+        "Java(Spring Boot, JPA)",
+        "MongoDB",
+        "Redis",
+        "TailwindCSS",
+        "Styled-Components",
+        "NextJS",
+        "JEST",
+        "Testing-library",
+        "Cypress (Teste End- To-End)",
+        "JUnit",
+        "Mockito",
+        "Selenium",
+        "CI/CD (GitHub Actions)",
+        "Docker (Kubernetes)",
+        "Mensageria (Apache Kafka)",
+        "Boas praticas codificação (Clean Code, Design patterns, SOLID)",
+        "Microsserviços",
+        "Engenharia de prompt",
+        "Shadcn/ui",
+    ],
+    "idiomas": [
+        "Inglês (Intermediário)",
+        "Espanhol (Intermediário)"
+    ],
+    "formacoes": [
+        "Técnico, Técnico em Informática, 02/2020 - 01/2022",
+        "Graduação, Análise e Desenvolvimento de Sistemas - Cursando atualmente"
+    ]
+}
+
+VAGA:((Logo da empresa Mouts TI Mouts TI Compartilhar Exibir mais opções Full Stack Developer (NestJS - NextJS - Typescript - NodeJS) Brasil · há 23 horas · Mais de 100 candidaturas Promovida por recrutador · A empresa normalmente leva 1 semana para avaliar as candidaturas Remoto Corresponde às suas preferências de vaga e o tipo de local de trabalho é Remoto. Tempo integral Corresponde às suas preferências de vaga e o tipo de vaga é Tempo integral. 6 de 8 correspondência(s) de competências Corresponde às suas preferências de vaga e o tipo de vaga é {}. Candidatura simplificada Salvar Salvar Full Stack Developer (NestJS - NextJS - Typescript - NodeJS) na Mouts TI Full Stack Developer (NestJS - NextJS - Typescript - NodeJS) Mouts TI · Brasil (Remoto) Candidatura simplificada Salvar Salvar Full Stack Developer (NestJS - NextJS - Typescript - NodeJS) na Mouts TI Exibir mais opções Veja como você se compara a mais de 100 outros candidatos Acesse insights exclusivos sobre candidatos, veja vagas sobre as quais você tem mais chances de receber resposta e muito mais. Experimente Premium por BRL0 Pessoas que você pode contatar Logo de UniCesumar Logo de UniCesumar Ex-alunos da instituição de ensino UniCesumar Exibir todos Conheça a equipe de contratação Camille Vitória Camille Vitória 1º Tech Recruiter | R&S | Talent Aquisition Anunciante da vaga · 58 conexões em comum Enviar mensagem Exibir todos Sobre a vaga 🚀 Vaga | Full Stack Developer (NestJS - NextJS - Typescript - NodeJS) – 100% Remoto Entregamos soluções personalizadas que auxiliam nossos clientes, de maneira ágil e eficaz, na promoção da transformação digital de seus negócios. Acreditamos que a tecnologia é um agente de inovação, com o intuito de melhorar a vida das pessoas de forma descomplicada. Venha fazer parte da Mouts e ajudar a melhorar a vida de milhares de pessoas! 💚 Estamos em busca de um(a) Full Stack Developer para atuar em projetos desafiadores e com alto impacto, em um ambiente colaborativo e dinâmico. ✅ Requisitos obrigatórios: Experiência sólida com TypeScript e NodeJS. Desenvolvimento backend com NestJS. Desenvolvimento frontend com NextJS (React). Conhecimento avançado em bancos relacionais, com foco em Azure SQL Server. Vivência com arquitetura de microsserviços e boas práticas de API (REST e GraphQL). Domínio de padrões de design, SOLID e Clean Architecture. Experiência com CI/CD e ferramentas de DevOps. Testes automatizados: unitários, integração e e2e. Capacidade de liderança técnica e boa tomada de decisão. Excelente comunicação e trabalho colaborativo com equipes multidisciplinares. Inglês avançado para conversação. 🌟 Vantagens de atuar na Mouts: 💰 Indicação premiada de novos profissionais; 💰 Indicação premiada de novos clientes; 🤓 Convênio com plataforma de curso de inglês; 🧏🏼 Gestão descomplicada e acessível; 📢 Comunicação transparente.))
+Que a resposta seja da maneira abaixo:
+{  "nome_da_empresa_canditatura": "Mouts TI",  "nome_candidato": "JOÃO GUILHERME",  "objetivo": "Full Stack Developer",  "informacoes_contato": {    "telefone": "(31) 99621-6938",    "email": "jguilhermeempresarial@outlook.com",    "endereco": "Ribeirão das Neves, Minas Gerais, BR",    "linkedin": "www.linkedin.com/in/joaog123",    "github": "https://github.com/JoaoG23"  },  "resumo_profissional": "Desenvolvedor Fullstack com 4 anos de experiência em projetos desafiadores, proficiente em NestJS, NextJS, TypeScript e NodeJS.  Experiência em microsserviços, Azure SQL Server e CI/CD.  Aguardo a oportunidade de contribuir com a Mouts TI!",  "experiencias_profissionais": [    {      "empresa": "Mirror Tecnologia",      "tempo_atuacao": "Fev de 2025 – Atualmente",      "cargo": "Desenvolvedor Fullstack",      "atividades": "Desenvolvimento e manutenção de soluções de e-commerce e logística, com foco em integrações entre marketplaces (Mercado Livre, Amazon, Magalu) e ERPs (Bling, Tiny, SAP).  Participação em projetos estratégicos para grandes empresas, como a Mondial Eletrodomésticos. Coautor de um SaaS analítico para vendas no Mercado Livre.",      "tecnologias": "NodeJS, NestJS, Python, MySQL, SQLAlchemy, Flask, Webhook, Oauth2, NextJS"    },    {      "empresa": "Autônomo",      "tempo_atuacao": "Ago de 2024 - Fev de 2025",      "cargo": "Desenvolvedor Fullstack",      "atividades": "Desenvolvimento de sistemas financeiros e contábeis, implementação de automações para extração de dados de NFEs em PDFs, otimizando processos e reduzindo tempo de trabalho.",      "tecnologias": "ReactJS, NodeJS, ExpressJS, Typescript, PostgresSQL, Docker, Python"    },    {      "empresa": "XC Soluções Tecnológicas",      "tempo_atuacao": "Dez de 2022 – Mai de 2024",      "cargo": "Desenvolvedor Fullstack Web",      "atividades": "Desenvolvimento e implementação do Sistema de Controle de Acesso para Docas e Portarias, incluindo integração com balança rodoviária para otimizar processos logísticos.",      "tecnologias": "ReactJS, Redux, Typescript, Bootstrap, ExpressJS, SQL Server, PostgresSQL, Oracle SQL, PrismaORM, NodeJS, Git, Github, Docker"    },    {      "empresa": "Autônomo",      "tempo_atuacao": "Mai de 2022 – Nov de 2022",      "cargo": "Desenvolvedor Freelancer Web",      "atividades": "Desenvolvimento de um MVP de aplicativo para academia, incluindo Back-end e Front-end, e participação no levantamento de requisitos.",      "tecnologias": "ReactJS, NodeJS, ExpressJS, Typescript, SequelizeORM"    },    {      "empresa": "AGS INN",      "tempo_atuacao": "Jul de 2021 - Abr de 2022",      "cargo": "Técnico de Suporte em Desenvolvimento TI e Software",      "atividades": "Suporte técnico a usuários, implantação de sistemas e criação de interfaces Front-end.",      "tecnologias": "HTML, CSS, Bootstrap, Materialize, MySQL, PostgresSQL, REST, Git"    }  ],  "outras_habilidades": [    "NestJS",    "NextJS",    "TypeScript",    "NodeJS",    "Azure SQL Server",    "Microsserviços",    "REST",    "GraphQL",    "SOLID",    "Clean Architecture",    "CI/CD",    "DevOps",    "Testes automatizados (unitários, integração, e2e)",    "Liderança técnica",    "Inglês avançado"  ],  "idiomas": [    "Inglês (Avançado)",    "Espanhol (Intermediário)"  ],  "formacoes": [    "Técnico em Informática, Senac Minas, 02/2020 - 01/2022",    "Graduação em Análise e Desenvolvimento de Sistemas - Cursando atualmente"  ]}
+
+Observações: 
+ - Ao realizar o retorno dos dados, não retire nenhuma das experiencias profissionais. 
+ - Se for alterar alguma experiencia ("experiencias_profissionais"), faça isso sutilmente, não faça alterações muito bruscas
+ que diferem demais os meus feitos, faça mudanças pequenas.
+ - Já as habilidade ("outras_habilidades") coloque somente as importante para o cargo.
+ - NÃO ALUCINE, EM IPOTESTE ALGUMA.
+ - EM Exemplos não apenas exemplos. As tecnologias podem varia de vaga para vaga. 
+ 

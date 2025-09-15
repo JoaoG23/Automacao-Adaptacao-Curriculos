@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask-cors = "*"
+flask = "*"
+python-docx = "*"
+pypdf2 = "*"
+docx2pdf = "*"
+requests = "*"
+dotenv = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"

@@ -1,0 +1,112 @@
+Colocar um extrator de textos para varios curriculos diferentes
+Mandar a ia criar um curriculo personalizado para cada cliente e retornar os dados 
+na estrutura
+{
+    titulo: 
+    resumo_objetivo:
+    experiencias:
+    nome: 
+    formacao:
+}
+Aplicação ler esse json e aplicar no documento com novo layout personalizado...
+
+Primeiro prompt para extrair alguns dados do curriculo;
+
+Quero você como AI especializada em ATS que você extraia
+e extraia as algumas informações dos curriculos e coloque ou 
+retorne esses dados em um json de exemplo:
+
+Os dados serem enviados da seguinte forma abaixo:
+CURRICULO: ((
+JOÃO GUILHERME | Desenvolvedor Fullstack JS 
+CEL: (31) 99621-6938 | EMAIL: jguilhermeempresarial@outlook.com 
+ENDEREÇO: Ribeirão das Neves, Minas Gerais, BR 
+LINKEDIN: www.linkedin.com/in/joaog123  
+PORTFÓLIO: https://joao-guilherme-portifolio.vercel.app  
+GITHUB: https://github.com/JoaoG23 
+IDIOMAS: Inglês (Intermediário), Espanhol (Intermediário); 
+Resumo 
+Tenho 4 anos de experiência em desenvolvimento Fullstack, especializado em websites, automações, 
+integrações, sistemas comerciais, e sou proficiente em tecnologias como Node.js, Typescript, React.js, entre 
+outras. 
+Experiências 
+● Mirror Tecnologia, Desenvolvedor Fullstack | Fev de 2025 – Atualmente 
+Atuo em soluções de e-commerce e logística, com especialização em integrações entre marketplaces 
+(Mercado Livre, Amazon, Magalu) e ERPs (Bling, Tiny, SAP). Participei de projetos estratégicos para 
+grandes empresas, como a Mondial Eletrodomésticos, solucionando desafios técnicos e operacionais. 
+Sou coautor de um SaaS analítico voltado para vendas no Mercado Livre, responsável por entregar 
+insights valiosos como ticket médio, receita consolidada e tendências de mercado. 
+Tecnologias: NodeJS, NestJS, Python, MySQL, SQLAlchemy, FlaskAPI, Webhook, Oauth2; 
+● Autônomo, Desenvolvedor Fullstack | Ago de 2024 - Fev de 2025 
+Criei sistemas financeiros e contábeis que otimizaram processos. Além disso, implementei 
+automações para extrair dados de NFEs em PDFs, permitindo que balanços que antes levavam dias 
+para serem concluídos fossem realizados em apenas algumas horas, reduzindo o trabalho do cliente. 
+Tecnologias: ReactJS, NodeJS, ExpressJS, Typescript, PostgresSQL, Docker, Python. 
+● XC Soluções Tecnológicas, Desenvolvedor Fullstack Web | Dez de 2022 – Mai de 2024 
+Otimizei a gestão de acesso para caminhoneiros e veículos, criando, estruturando e documentando o 
+Sistema de Controle de Acesso para Docas e Portarias, do início ao fim, com atuação no Back-end e 
+Front-end. Integrei uma balança rodoviária ao Sistema de Gestão de Doca e Portaria, automatizando o 
+check-in de veículos, o que melhorou significativamente o processo logístico e eliminou filas de 
+caminhões.  
+Tecnologias: ReactJS, Redux, Typescript, Bootstrap, ExpressJS, SQL Server, PostgresSQL, Oracle SQL, 
+PrismaORM, NodeJS, Git, Github, Docker. 
+● Autônomo, Desenvolvedor Freelancer Web | Mai de 2022 – Nov de 2022 
+Atuei como freelancer no desenvolvimento de um MVP de aplicativo para academia, envolvendo a 
+criação do Back-end e Front-end. Também participei do levantamento de requisitos para garantir 
+soluções alinhadas às necessidades do projeto. 
+Tecnologias: ReactJS, NodeJS, ExpressJS, Typescript, SequelizeORM 
+● AGS INN, Técnico de Suporte em Desenvolvimento TI e Software | Jul de 2021 - Abr de 2022 
+Suporte técnico aos usuários, implantação de sistemas e criação de interfaces Front-end para sistemas. 
+Tecnologias: HTML, CSS, Bootstrap, Materialize, MySQL, PostgresSQL, SOUP, REST, Git. 
+Habilidades & Ferramentas 
+● Backend: NestJS,Pandas, Flask, Java, Spring Boot, SQL, MongoDB, Redis; 
+● Frontend:  TailwindCSS, Styled-Components, NextJS; 
+● Testes Automatizados unitário e integração: JEST, Testing-library, Cypress (Teste End- To-End) e 
+(JUnit, Mockito, Selenium); 
+● Deploys e Implementações: CI/CD (GitHub Actions), Docker (Kubernetes), AWS Services (RDS, IAM, 
+VPC, EC2), Mensageria (Apache Kafka); 
+● Outros: Clean Code, Design patterns, SOLID, Microsserviços, Engenharia de prompt 
+Formação 
+● Técnico em Informática, Senac Minas, 02/2020 - 01/2022; 
+● Graduação, Análise e Desenvolvimento de Sistemas - Cursando atualmente;
+
+))
+
+O retorno deverá ocorre da seguinte maneira abaixo, um JSON:
+
+RETORNO: {
+    "nome_candidato": João Guilherme,
+    "objetivo": Desenvolvedor Fullstack JS,
+    "informacoes_contato":  {
+        "telefone": "(31) 99621-6938",
+        "email": "jguilhermeempresarial@outlook.com",
+        "endereco": "Ribeirão das Neves, Minas Gerais, BR"
+        "linkedin": "www.linkedin.com/in/joaog123" # <se não tiver coloque vazio>
+        "github":"https://github.com/JoaoG23"
+    },
+    "resumo_profissional": "Tenho 4 anos de experiência em desenvolvimento Fullstack, especializado em websites, automações, 
+integrações, sistemas comerciais, e sou proficiente em tecnologias como Node.js, Typescript, React.js, entre 
+outras. ",
+    "experiencias_profissionais":[
+        {
+            empresa: "Mirror Tecnologia",
+            tempo_atuacao: "Fev de 2025 – Atualmente"
+            cargo:" Desenvolvedor Fullstack"
+            atividades:"Atuo em soluções de e-commerce e logística, com especialização em integrações entre marketplaces 
+(Mercado Livre, Amazon, Magalu) e ERPs (Bling, Tiny, SAP). Participei de projetos estratégicos para 
+grandes empresas, como a Mondial Eletrodomésticos, solucionando desafios técnicos e operacionais. 
+Sou coautor de um SaaS analítico voltado para vendas no Mercado Livre, responsável por entregar 
+insights valiosos como ticket médio, receita consolidada e tendências de mercado. "
+            tecnologias:"NodeJS, NestJS, Python, MySQL, SQLAlchemy, FlaskAPI, Webhook, Oauth2;"
+        },...
+    ],
+    "habilidades": [
+        "NestJS", "Pandas","Flask", "TailwindCSS"..
+    ],
+    "idiomas": [
+        "Inglês (Intermediário)", "Espanhol (Intermediário)"
+    ],
+    "formacoes": ["Técnico, Técnico em Informática, 02/2020 - 01/2022;", "Graduação, Análise e Desenvolvimento de Sistemas - Cursando atualmente;",...]
+}
+
+Se voce entendeu diga, ok abaixo?
