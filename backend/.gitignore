@@ -212,9 +212,9 @@ __marimo__/
 # Custon
 .vscode/
 
-backend/exports/*
-backend/imports/*
+exports/*
+imports/*
 
-backend/exports/.gitkeep!
-backend/imports/.gitkeep!
+exports/.gitkeep!
+imports/.gitkeep!
 
