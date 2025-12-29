@@ -5,14 +5,7 @@ import { useState } from "react";
 interface ApiResponse {
   message?: string;
   error?: string;
-  data?: {
-    data: {
-      email: "jguilhermeempresarial@outlook.com";
-      message: "Curr\u00edculo criado com sucesso!";
-      nome_candidato: "JO\u00c3O GUILHERME";
-    };
-    message: "Curr\u00edculo gerado com sucesso!";
-  };
+  pdfUrl?: string;
 }
 
 export default function Home() {
@@ -27,8 +20,8 @@ export default function Home() {
   const cleanJobDescription = (text: string): string => {
     return text
       .trim() // Remove espaços do início e fim
-      .replace(/\n+/g, ' ') // Substitui quebras de linha por espaços
-      .replace(/\s+/g, ' ') // Substitui múltiplos espaços por um único espaço
+      .replace(/\n+/g, " ") // Substitui quebras de linha por espaços
+      .replace(/\s+/g, " ") // Substitui múltiplos espaços por um único espaço
       .trim(); // Remove espaços extras que possam ter sobrado
   };
 
@@ -36,7 +29,7 @@ export default function Home() {
     return jobDescription.trim().length > 0;
   };
 
-  const sendRequest = async (): Promise<ApiResponse> => {
+  const sendRequest = async (): Promise<string> => {
     const response = await fetch("http://localhost:3003/api/generate-resume", {
       method: "POST",
       headers: {
@@ -48,10 +41,14 @@ export default function Home() {
     });
 
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(
+        errorData.error || `HTTP error! status: ${response.status}`
+      );
     }
 
-    return await response.json();
+    const blob = await response.blob();
+    return URL.createObjectURL(blob);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -66,8 +63,9 @@ export default function Home() {
     setResponse(null);
 
     try {
-      const result = await sendRequest();
-      setResponse(result);
+      const pdfUrl = await sendRequest();
+      console.log('pdfUrl', pdfUrl)
+      setResponse({ message: "Currículo gerado com sucesso!", pdfUrl });
     } catch (error) {
       setResponse({
         error: `Erro ao processar requisição: ${
@@ -158,11 +156,15 @@ export default function Home() {
                     <div className="mt-2 text-sm text-green-700">
                       {response.message}
                     </div>
-                    {response.data && (
-                      <div className="mt-2 text-sm text-green-600">
-                        <pre className="whitespace-pre-wrap bg-green-100 p-2 rounded text-xs">
-                          {JSON.stringify(response.data, null, 2)}
-                        </pre>
+                    {response.pdfUrl && (
+                      <div className="mt-4">
+                        <a
+                          href={response.pdfUrl}
+                          download="curriculo_joão_guilherme.pdf"
+                          className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                        >
+                          Baixar Currículo (PDF)
+                        </a>
                       </div>
                     )}
                   </div>
