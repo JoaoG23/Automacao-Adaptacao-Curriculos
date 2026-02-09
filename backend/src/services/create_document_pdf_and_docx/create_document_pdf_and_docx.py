@@ -265,6 +265,4 @@ def create_document_pdf_and_docx(data: dict):
     if pdf_filename:
         print(f"Currículo também salvo em PDF: {pdf_filename}")
 
-    send_from_directory(PATH_EXPORT, filename_docx, as_attachment=True)
-    # send_from_directory(PATH_EXPORT, pdf_filename)
     return docx_filename, pdf_filename

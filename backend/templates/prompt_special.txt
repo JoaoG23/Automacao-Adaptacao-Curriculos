@@ -209,3 +209,4 @@ Observações:
  - Ao realizar o retorno dos dados, não retire nenhuma das experiencias profissionais. 
  - Já as habilidade ("outras_habilidades") coloque somente as importante para o cargo.
  - Na key "resumo_profissional" deve conter no máximo 330 caracteres com metrica de porcentagem.
+ - Não utilize asteristicos para formatação de texto (**). 

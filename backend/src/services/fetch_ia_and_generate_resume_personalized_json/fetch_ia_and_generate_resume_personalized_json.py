@@ -16,7 +16,6 @@ def fetch_ia_and_generate_resume_personalized_json(job_description, prompt=''):
     
     headers = {
         "Content-Type": "application/json",
-        "User-Agent": "insomnia/2023.5.8"
     }
     
     payload = {
@@ -40,9 +39,9 @@ def fetch_ia_and_generate_resume_personalized_json(job_description, prompt=''):
     }
     sleep(0.3)
     try:
-        # The URL now uses the token variable via params
+        # The URL now uses the token variable via params 
         response = requests.post(
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent", 
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent", 
             headers=headers,
             json=payload,
             timeout=100,
