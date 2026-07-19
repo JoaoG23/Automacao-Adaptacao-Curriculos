@@ -10,56 +10,61 @@ from time import sleep
 load_dotenv()
 
 
-def fetch_ia_and_generate_resume_personalized_json(job_description, prompt = ''):
-    
-    
+def fetch_ia_and_generate_resume_personalized_json(job_description, prompt=''):
     prompt_without_linebreak = remove_linebreak_text(prompt)
-    
     token = os.getenv("AI_TOKEN")
-    URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={token}"  # URL corrigida
+    
     headers = {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
     }
     
     payload = {
+        # The instruction "prompt" must come here to avoid order errors
+        "system_instruction": {
+            "parts": [
+                {"text": prompt_without_linebreak}
+            ]
+        },
         "contents": [
             {
-                "role": "assistant",
+                "role": "user",  # Required to be 'user' in the first position
                 "parts": [
-                    {
-                        "text": f"{prompt_without_linebreak}"
-                    }
-                ]
-            },
-            {
-                "role": "user",
-                "parts": [
-                    {
-                        "text": f"VAGA: (({job_description}))"
-                    }
+                    {"text": f"VAGA: (({job_description}))"}
                 ]
             }
         ],
         "generation_config": {
-            # "candidate_count": 1,
             "temperature": 0.3
         }
     }
+    sleep(0.3)
     try:
-        response = requests.post(URL, headers=headers, json=payload, timeout=100)
-        response.raise_for_status()  # Lança exceção para status 4xx/5xx
-        sleep(2)
-        if response.status_code == 200:
-            response_json = response.json()
-            generated_text = response_json["candidates"][0]["content"]["parts"][0]["text"]
-            text_without_linebreak = remove_linebreak_text(generated_text)
-            return text_without_linebreak
-        return None
+        # The URL now uses the token variable via params 
+        response = requests.post(
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent", 
+            headers=headers,
+            json=payload,
+            timeout=100,
+            params={"key": token}
+        )
+        
+        response.raise_for_status()
+        
+        response_json = response.json()
+        # Accessing the text field safely
+        generated_text = response_json["candidates"][0]["content"]["parts"][0]["text"]
+        return remove_linebreak_text(generated_text)
             
+    except requests.exceptions.HTTPError as e:
+        # Extracts the real Google error message hidden in the JSON
+        try:
+            error_details = e.response.json()
+            error_msg = error_details.get("error", {}).get("message", e.response.text)
+        except:
+            error_msg = e.response.text
+        raise Exception(f"Gemini API Error: {error_msg}") from e
+        
     except requests.exceptions.RequestException as e:
-        print(e)
         raise e
-    except json.JSONDecodeError as e:
-        print(e)
-        raise e
-    
+    except (json.JSONDecodeError, KeyError) as e:
+        raise ValueError(f"Error processing AI response: {str(e)}")

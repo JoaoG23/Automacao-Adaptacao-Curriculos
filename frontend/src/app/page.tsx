@@ -5,14 +5,8 @@ import { useState } from "react";
 interface ApiResponse {
   message?: string;
   error?: string;
-  data?: {
-    data: {
-      email: "jguilhermeempresarial@outlook.com";
-      message: "Curr\u00edculo criado com sucesso!";
-      nome_candidato: "JO\u00c3O GUILHERME";
-    };
-    message: "Curr\u00edculo gerado com sucesso!";
-  };
+  pdfUrl?: string;
+  docxUrl?: string;
 }
 
 export default function Home() {
@@ -25,19 +19,18 @@ export default function Home() {
   };
 
   const cleanJobDescription = (text: string): string => {
-    return text
-      .trim() // Remove espaços do início e fim
-      .replace(/\n+/g, ' ') // Substitui quebras de linha por espaços
-      .replace(/\s+/g, ' ') // Substitui múltiplos espaços por um único espaço
-      .trim(); // Remove espaços extras que possam ter sobrado
+    return text.trim().replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
   };
 
   const validateInput = (): boolean => {
     return jobDescription.trim().length > 0;
   };
 
-  const sendRequest = async (): Promise<ApiResponse> => {
-    const response = await fetch("http://localhost:3003/api/generate-resume", {
+  const sendRequest = async (): Promise<{
+    pdfUrl: string;
+    docxUrl: string;
+  }> => {
+    const response = await fetch("http://192.168.100.7:3003/api/generate-resume", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -48,10 +41,21 @@ export default function Home() {
     });
 
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(
+        errorData.message ||
+          errorData.error ||
+          `HTTP error! status: ${response.status}`,
+      );
     }
 
-    return await response.json();
+    const data = await response.json();
+    const baseUrl = "http://localhost:3003/api/download";
+
+    return {
+      pdfUrl: `${baseUrl}/${data.pdf}`,
+      docxUrl: `${baseUrl}/${data.docx}`,
+    };
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -66,8 +70,12 @@ export default function Home() {
     setResponse(null);
 
     try {
-      const result = await sendRequest();
-      setResponse(result);
+      const { pdfUrl, docxUrl } = await sendRequest();
+      setResponse({
+        message: "Currículo gerado com sucesso! Escolha o formato para baixar:",
+        pdfUrl,
+        docxUrl,
+      });
     } catch (error) {
       setResponse({
         error: `Erro ao processar requisição: ${
@@ -158,11 +166,26 @@ export default function Home() {
                     <div className="mt-2 text-sm text-green-700">
                       {response.message}
                     </div>
-                    {response.data && (
-                      <div className="mt-2 text-sm text-green-600">
-                        <pre className="whitespace-pre-wrap bg-green-100 p-2 rounded text-xs">
-                          {JSON.stringify(response.data, null, 2)}
-                        </pre>
+                    {(response.pdfUrl || response.docxUrl) && (
+                      <div className="mt-4 flex flex-wrap gap-4">
+                        {response.pdfUrl && (
+                          <a
+                            href={response.pdfUrl}
+                            download
+                            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                          >
+                            Baixar PDF
+                          </a>
+                        )}
+                        {response.docxUrl && (
+                          <a
+                            href={response.docxUrl}
+                            download
+                            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                          >
+                            Baixar DOCX
+                          </a>
+                        )}
                       </div>
                     )}
                   </div>
